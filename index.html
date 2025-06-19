@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepu G | Data Science Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind Dark Mode config
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <style>
+    /* Smooth scroll for navigation links */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Active navigation link highlight */
+    .active-nav-link {
+      border-bottom: 2px solid #3B82F6; /* Blue line */
+      padding-bottom: 2px; /* Small space for the line */
+    }
+
+    /* Dark Mode Toggle Switch Styles */
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px; /* Width of the entire switch */
+      height: 24px; /* Height of the entire switch */
+      vertical-align: middle; /* Align with text */
+      margin-left: 1rem; /* Adjust spacing from nav links */
+    }
+
+    /* Hide default HTML checkbox */
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider (the track) */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #718096; /* Grey for light mode (off) */
+      transition: .4s;
+      border-radius: 24px; /* Rounded corners for the track */
+    }
+
+    /* Background color of the slider when in dark mode (checked) */
+    .dark .slider {
+      background-color: #3B82F6; /* Blue for dark mode (on) */
+    }
+
+    /* The slider thumb */
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 18px; /* Height of the thumb */
+      width: 18px; /* Width of the thumb */
+      left: 3px; /* Initial position */
+      bottom: 3px; /* Initial position */
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%; /* Make it round */
+    }
+
+    /* Move the thumb when checked (dark mode active) */
+    .theme-switch input:checked + .slider::before {
+      transform: translateX(20px); /* Move 20px to the right */
+    }
+  </style>
+</head>
+<!--
+  Background Colors:
+  Light Mode: #F8FAFC (very light blue-grey) - clean, professional, soft
+  Dark Mode: #0F172A (deep dark blue-grey) - common, easy on eyes, professional
+-->
+<body class="bg-[#F8FAFC] text-[#1E293B] dark:bg-[#0F172A] dark:text-white font-sans transition-colors duration-500">
+
+  <!-- Navigation -->
+  <header class="bg-[#1E293B] dark:bg-[#111827] sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Deepu G</h1>
+      <nav class="space-x-4 text-sm sm:text-base text-white flex items-center">
+        <a href="#about" class="hover:text-[#3B82F6]">About</a>
+        <a href="#badges" class="hover:text-[#3B82F6]">Badges</a>
+        <a href="#certifications" class="hover:text-[#3B82F6]">Certifications</a>
+        <a href="#projects" class="hover:text-[#3B82F6]">Projects</a>
+        <a href="#contact" class="hover:text-[#3B82F6]">Contact</a>
+        <a href="files/Resume.pdf" target="_blank" class="hover:text-[#3B82F6]">Resume</a>
+        <!-- Dark Mode Toggle Switch -->
+        <label for="themeToggle" class="theme-switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+        <!-- New span for the icon indicator -->
+        <span id="themeIcon" class="ml-2 text-lg"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white dark:bg-[#1E293B] py-16 px-6 text-center shadow-sm transition-colors duration-500">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-2">Hi!</h2>
+      <h2 class="text-4xl font-bold mb-6 text-[#3B82F6]">I'm Deepu G</h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+        A passionate learner and problem solver with a strong interest in Data Analysis, EDA, Feature Engineering,<br class="hidden md:inline">
+        Machine Learning, Deep Learning, and the world of Generative AI.<br><br>
+        Also, an unofficial <span class="italic text-[#3B82F6]">Prompt Engineer</span> 😉 – exploring the power of words to drive intelligent models.
+      </p>
+      <!-- New "Here's More!" button added -->
+      <div class="mt-8">
+        <a href="#skills" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+          Here's More!
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section - Emojis replaced with Image Placeholders -->
+  <section class="bg-[#F8FAFC] dark:bg-[#0F172A] py-12 px-4 transition-colors duration-500">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+
+      <!-- Card 1: Personal Data Analysis Projects -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+        <!-- Replace this src with your actual PNG path -->
+        <img src="images/projects.png" alt="Data Analysis Projects Icon" class="w-12 h-12 mx-auto mb-2" />
+        <h3 class="text-2xl font-bold mb-1 text-[#3B82F6]">20+</h3>
+        <p class="text-gray-700 dark:text-gray-300">Personal Data Analysis Projects</p>
+      </div>
+
+      <!-- Card 2: Professional + Freelancing + Internship -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+        <!-- Replace this src with your actual PNG path -->
+        <img src="images/job.png" alt="Professional Experience Icon" class="w-12 h-12 mx-auto mb-2" />
+        <h3 class="text-2xl font-bold mb-1 text-[#3B82F6]">1 Year</h3>
+        <p class="text-gray-700 dark:text-gray-300">Professional + Freelancing + Internship</p>
+      </div>
+
+      <!-- Card 3: Experience as a Private Tutor -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+        <!-- Replace this src with your actual PNG path -->
+        <img src="images/tutor.png" alt="Private Tutor Experience Icon" class="w-12 h-12 mx-auto mb-2" />
+        <h3 class="text-2xl font-bold mb-1 text-[#3B82F6]">6 Months</h3>
+        <p class="text-gray-700 dark:text-gray-300">Experience as a Private Tutor</p>
+      </div>
+
+      <!-- Card 4: Research Experience -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+        <!-- Replace this src with your actual PNG path -->
+        <img src="images/research.png" alt="Research Experience Icon" class="w-12 h-12 mx-auto mb-2" />
+        <h3 class="text-2xl font-bold mb-1 text-[#3B82F6]">1 Year</h3>
+        <p class="text-gray-700 dark:text-gray-300">Research Experience (1 Published Paper)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills & Tools Section - Positioned after Experience counts -->
+  <section id="skills" class="bg-[#F9FAFB] text-[#1F2937] dark:bg-[#0F172A] dark:text-white py-12 px-4 transition-colors duration-500">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8 text-[#3B82F6] dark:text-blue-400">My Tools</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-lg font-medium">
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Statistics</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">EDA</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Python</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">MySQL</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Streamlit</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Flask</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Feature Engineering</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Machine Learning</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Deep Learning</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Generative AI</div>
+        <div class="bg-white shadow rounded-xl py-4 px-6 dark:bg-[#1E293B] transition-colors duration-500">Excel</div>
+      </div>
+    </div>
+  </section>
+
+<!-- Certificate Modal (re-used for Badges and Certifications) -->
+<div id="certModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+  <span onclick="closeModal()" class="absolute top-6 right-8 text-white text-4xl font-bold cursor-pointer">&times;</span>
+  <img id="modalCertImage" class="max-h-[90vh] max-w-full rounded-lg shadow-lg border-4 border-white" />
+</div>
+
+<!-- GCP Skill Badges Section -->
+<section id="badges" class="bg-[#1E293B] text-white py-12 px-4 dark:bg-[#111827] transition-colors duration-500">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8 text-[#3B82F6] dark:text-blue-400">GCP Skill Badges</h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8 justify-items-center">
+
+      <!-- Badge 2 -->
+      <img src="images/badges/introduction_to_genai.png" alt="Introduction to GenAI"
+            onclick="openModal('images/badges/introduction_to_genai.png')"
+            class="w-36 h-36 object-contain rounded-xl shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-150" />
+
+      <!-- Badge 3 -->
+      <img src="images/badges/introduction_to_LLM.png" alt="Introduction to LLM"
+            onclick="openModal('images/badges/introduction_to_LLM.png')"
+            class="w-36 h-36 object-contain rounded-xl shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-150" />
+
+      <!-- Badge 4 -->
+      <img src="images/badges/Introduction_to_responsible_ai.png" alt="Responsible AI"
+            onclick="openModal('images/badges/Introduction_to_responsible_ai.png')"
+            class="w-36 h-36 object-contain rounded-xl shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-150" />
+
+      <!-- Badge 5 -->
+      <img src="images/badges/AI_principles.png" alt="Prompt Design in Vertex AI"
+            onclick="openModal('images/badges/Prompt_design_in_vertexai.png')"
+            class="w-36 h-36 object-contain rounded-xl shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-150" />
+    </div>
+  </div>
+</section>
+
+<!--Certification section-->
+<!-- Certification Section -->
+<section id="certifications" class="bg-gray-50 py-12 px-4 dark:bg-[#17202D] transition-colors duration-500">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10 text-[#3B82F6] dark:text-blue-400">Certifications</h2>
+
+    <!-- Certificates Grid -->
+    <div id="certificates-grid" class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+
+      <!-- Always Visible Certificates -->
+      <div class="flex items-start gap-4 cursor-pointer group bg-white dark:bg-[#1E293B] p-4 rounded-lg shadow-md transition-colors duration-500" onclick="openModal('images/certificates/Accenture.png')">
+        <img src="images/certificates/Accenture.png" alt="Accenture Certificate" class="w-28 h-auto rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-150" />
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Accenture AI/ML Virtual Experience</h3>
+          <p class="text-gray-600 text-sm dark:text-gray-300">Completed virtual internship experience offered by Accenture through Forage, focused on AI/ML solutions, project scoping, and business impact assessment.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 cursor-pointer group bg-white dark:bg-[#1E293B] p-4 rounded-lg shadow-md transition-colors duration-500" onclick="openModal('images/certificates/BCGX.png')">
+        <img src="images/certificates/BCGX.png" alt="BCGx Certificate" class="w-28 h-auto rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-150" />
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white">BCGx Data Science Virtual Experience</h3>
+          <p class="text-gray-600 text-sm dark:text-gray-300">Gained real-world exposure to solving business problems using data-driven insights and predictive modeling in a simulated consulting environment.</p>
+        </div>
+      </div>
+
+      <!-- Hidden Certificates -->
+      <div class="extra-cert hidden flex items-start gap-4 cursor-pointer group bg-white dark:bg-[#1E293B] p-4 rounded-lg shadow-md transition-colors duration-500" onclick="openModal('images/certificates/Kaggle-Python.png')">
+        <img src="images/certificates/Kaggle-Python.png" alt="Kaggle Certificate" class="w-28 h-auto rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-150" />
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Kaggle – Python & Machine Learning</h3>
+          <p class="text-gray-600 text-sm dark:text-gray-300">Completed foundational and intermediate courses on Python programming, data science workflows, and machine learning algorithms via Kaggle Learn.</p>
+        </div>
+      </div>
+
+      <div class="extra-cert hidden flex items-start gap-4 cursor-pointer group bg-white dark:bg-[#1E293B] p-4 rounded-lg shadow-md transition-colors duration-500" onclick="openModal('images/certificates/AI and Data Scientist-Certificate.png')">
+        <img src="images/certificates/AI and Data Scientist-Certificate.png" alt="AI Certificate" class="w-28 h-auto rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-150" />
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white">AI & Data Scientist Training</h3>
+          <p class="text-gray-600 text-sm dark:text-gray-300">Completed advanced AI and data science training covering deep learning, data preprocessing, and model deployment.</p>
+        </div>
+      </div>
+
+      <div class="extra-cert hidden flex items-start gap-4 cursor-pointer group bg-white dark:bg-[#1E293B] p-4 rounded-lg shadow-md transition-colors duration-500" onclick="openModal('images/certificates/Python-Certificate.png')">
+        <img src="images/certificates/Python-Certificate.png" alt="Python Certificate" class="w-28 h-auto rounded-lg shadow-md transform transition-transform duration-300 group-hover:scale-150" />
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Python Programming Certificate</h3>
+          <p class="text-gray-600 text-sm dark:text-gray-300">Demonstrated proficiency in Python including functions, OOP, data structures, and file handling.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Toggle Button -->
+    <button
+      id="toggleCertBtn"
+      onclick="toggleCertificates()"
+      class="mt-8 px-6 py-2 bg-[#3B82F6] text-white rounded-lg hover:bg-blue-700 transition"
+    >
+      Show More
+    </button>
+    <!-- Button added below Certifications -->
+    <div class="mt-8 text-center">
+      <a href="aboutme.html" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+        Know more about me!
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="bg-[#F8FAFC] py-12 px-4 dark:bg-[#0F172A] transition-colors duration-500">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10 text-[#3B82F6] dark:text-blue-400">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+      <!-- Project 1: Fake News Detection App -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/fake.webp" alt="Fake News Detection App" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">PYTHON & ML</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Fake News Detection App</h3>
+      </div>
+
+      <!-- Project 2: Movie Recommendation System -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/movie1.png" alt="Movie Recommendation System" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">PYTHON & ML</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Movie Recommendation System</h3>
+      </div>
+
+      <!-- Project 3: Cyber Threat Detection System -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/cyber.jpg" alt="Cyber Threat Detection System" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">ML & WEB DEV</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Cyber Threat Detection System</h3>
+      </div>
+
+      <!-- Project 4: Real-time Object Detection -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/object_detection.png" alt="Real-time Object Detection" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">YOLO & PYTHON</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Real-time Object Detection</h3>
+      </div>
+
+      <!-- Project 5: Handwritten Digit Recognition -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/hand_written.png" alt="Handwritten Digit Recognition" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">CNN & FLASK</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Handwritten Digit Recognition</h3>
+      </div>
+
+      <!-- Project 6: Parkinson's Disease Detection -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/parkinson.jpg" alt="Parkinson's Disease Detection" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">PYTORCH & ML</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Parkinson's Disease Detection</h3>
+      </div>
+
+      <!-- Project 12: Real-time Weather Prediction using API -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/weather.jpg" alt="Real-time Weather Prediction using API" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">API & ML</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Real-time Weather Prediction using API</h3>
+      </div>
+
+      <!-- Project 13: Traffic Sign Classification using CNN -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/traffic.jpg" alt="Traffic Sign Classification using CNN" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">CNN & VISION</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Traffic Sign Classification using CNN</h3>
+      </div>
+
+      <!-- NEW Project: Real-time Stock Prediction using Tesla Dataset -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/stock.png" alt="Real-time Stock Prediction using Tesla Dataset" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">STREAMLIT & DL</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Real-time Stock Prediction (Tesla)</h3>
+      </div>
+
+      <!-- NEW Project: Jasmine Plant Leaf Disease Detection using CNN -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/jasmine.png" alt="Jasmine Plant Leaf Disease Detection" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">CNN & VISION</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Jasmine Plant Leaf Disease Detection (CNN)</h3>
+      </div>
+
+      <!-- NEW Project: Audio Deep Fake Detection using Machine Learning -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/audio.webp" alt="Audio Deep Fake Detection" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">ML & AUDIO</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">Audio Deepfake Detection (ML)</h3>
+      </div>
+
+      <!-- NEW Project: Finding High Utility Spatial Patterns in Utility Database using HDSHUIM -->
+      <div class="bg-white dark:bg-[#1E293B] p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 flex flex-col">
+          <img src="images/spatial.jpg" alt="High Utility Spatial Patterns" class="w-full h-48 object-cover rounded-md mb-4"/>
+          <div class="flex flex-wrap gap-2 mb-2">
+              <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-100">DATA MINING</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#3B82F6] dark:text-blue-400 mb-1">High Utility Spatial Patterns (HDSHUIM)</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+<section id="contact" class="bg-[#F9FAFB] text-[#1F2937] dark:bg-[#0F172A] dark:text-white py-10 px-4 transition-colors duration-500">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+    <p class="text-base text-gray-600 dark:text-gray-300 mb-6">
+      Feel free to reach out for collaborations, project discussions, or just to say hello!
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- Location -->
+      <a href="https://www.google.com/maps/search/?api=1&query=India" target="_blank"
+         class="block bg-white rounded-xl shadow p-6 text-center dark:bg-[#1E293B] transform transition-transform duration-300 hover:scale-105 cursor-pointer group">
+        <img src="images/location.png" alt="Location Icon" class="w-10 h-10 mx-auto mb-3" />
+        <h3 class="font-semibold text-black dark:text-white">Location</h3>
+        <p class="dark:text-gray-300">India (Open for Relocation)</p>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:deepug1042@gmail.com"
+         class="block bg-white rounded-xl shadow p-6 text-center dark:bg-[#1E293B] transform transition-transform duration-300 hover:scale-105 cursor-pointer group">
+        <img src="images/email.png" alt="Email Icon" class="w-10 h-10 mx-auto mb-3" />
+        <h3 class="font-semibold text-black dark:text-white">Email</h3>
+        <p class="dark:text-gray-300">deepug1042@gmail.com</p>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/deepu-g-659986227/" target="_blank"
+         class="block bg-white rounded-xl shadow p-6 text-center dark:bg-[#1E293B] transform transition-transform duration-300 hover:scale-105 cursor-pointer group">
+        <img src="images/linkedin.png" alt="LinkedIn Icon" class="w-10 h-10 mx-auto mb-3" />
+        <h3 class="font-semibold text-black dark:text-white">LinkedIn</h3>
+        <p class="text-[#3B82F6] underline group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-200">Let's connect!</p>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/deepug1042" target="_blank"
+         class="block bg-white rounded-xl shadow p-6 text-center dark:bg-[#1E293B] transform transition-transform duration-300 hover:scale-105 cursor-pointer group">
+        <img src="images/github.png" alt="GitHub Icon" class="w-10 h-10 mx-auto mb-3" />
+        <h3 class="font-semibold text-black dark:text-white">GitHub</h3>
+        <p class="text-[#3B82F6] underline group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-200">Explore my projects</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-[#0F172A] text-center text-gray-400 text-sm py-4 dark:bg-[#111827] dark:text-gray-500 transition-colors duration-500">
+    © 2025 Deepu G | Data Science Portfolio
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Dark Mode Toggle Logic
+      const themeToggleCheckbox = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+
+      // Function to apply/remove dark mode and update local storage/UI
+      const applyTheme = (theme) => {
+        const html = document.documentElement;
+        if (theme === 'dark') {
+          html.classList.add('dark');
+          themeToggleCheckbox.checked = true;
+          themeIcon.textContent = '☀️';
+        } else {
+          html.classList.remove('dark');
+          themeToggleCheckbox.checked = false;
+          themeIcon.textContent = '🌙';
+        }
+        localStorage.setItem('theme', theme);
+      };
+
+      // Toggle theme function triggered by checkbox change
+      const toggleTheme = () => {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+          applyTheme('light');
+        } else {
+          applyTheme('dark');
+        }
+      };
+
+      // Load saved theme on initial page load
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        applyTheme(savedTheme);
+      } else {
+        // Default to light mode if no theme is saved
+        applyTheme('light');
+      }
+
+      // Add event listener to the checkbox
+      themeToggleCheckbox.addEventListener('change', toggleTheme);
+
+
+      // Active Navigation Highlight Script
+      const header = document.querySelector('header');
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('nav a[href^="#"]'); // Selects links that jump to sections
+
+      function highlightNavLink() {
+        const headerHeight = header.offsetHeight;
+        const scrollPosition = window.scrollY;
+        // A smaller buffer to activate the link when the section top is just below the header
+        const activationOffset = headerHeight + 5; 
+
+        let activeSectionId = '';
+
+        // Iterate through sections to find which one is currently in view
+        // We go in reverse to prioritize sections further down the page
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = sections[i];
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+
+          // Check if the scroll position plus a small offset is within the section's bounds
+          if (scrollPosition + activationOffset >= sectionTop && scrollPosition + activationOffset < sectionBottom) {
+            activeSectionId = section.id;
+            break;
+          }
+        }
+
+        // Special handling for the very top of the page: if no section is active, default to "about"
+        // This ensures "About" is highlighted when the user is at the very top.
+        if (!activeSectionId && scrollPosition < 100) { // If scroll is near the top
+          activeSectionId = 'about';
+        }
+
+        // Apply/remove active class to navigation links
+        navLinks.forEach(link => {
+          link.classList.remove('active-nav-link'); // Remove active class from all links
+          // Check if the link's href matches the active section's ID
+          if (link.getAttribute('href') === `#${activeSectionId}`) {
+            link.classList.add('active-nav-link'); // Add active class to the matching link
+          }
+        });
+      }
+
+      // Attach event listeners for scroll, load, and resize
+      window.addEventListener('scroll', highlightNavLink);
+      window.addEventListener('load', highlightNavLink);
+      window.addEventListener('resize', highlightNavLink);
+      highlightNavLink(); // Initial call to set the highlight on page load
+
+
+      // Certificate Modal Functions
+      window.openModal = function(src) {
+        const modal = document.getElementById("certModal");
+        const modalImage = document.getElementById("modalCertImage");
+        modalImage.src = src;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        // console.log("Modal opened for: ", src); // Debug log
+      };
+
+      window.closeModal = function() {
+        const modal = document.getElementById("certModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        // console.log("Modal closed."); // Debug log
+      };
+
+      // Toggle Certificates Function (Show More/Less)
+      window.toggleCertificates = function() {
+        // console.log("toggleCertificates function called."); // Debug log
+        const extras = document.querySelectorAll('.extra-cert');
+        const btn = document.getElementById('toggleCertBtn');
+
+        if (extras.length === 0) {
+          // console.log("No elements with class 'extra-cert' found."); // Debug log
+          return; // Exit if no elements found
+        }
+
+        const isHidden = extras[0].classList.contains('hidden');
+        // console.log("Current state (isHidden):", isHidden); // Debug log
+
+        extras.forEach((cert, index) => {
+          cert.classList.toggle('hidden');
+          // console.log(`Toggled visibility for extra-cert[${index}]. New state:`, !cert.classList.contains('hidden')); // Debug log
+        });
+
+        btn.textContent = isHidden ? 'Show Less' : 'Show More';
+        // console.log("Button text updated to:", btn.textContent); // Debug log
+      };
+    }); // End of DOMContentLoaded
+  </script>
+
+</body>
+</html>

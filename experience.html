@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepu G | Experience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind Dark Mode config - ensure it's consistent
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #FFF;
+    }
+    .dark .theme-toggle {
+      color: #FFF;
+    }
+    /* Active navigation link highlight for this page */
+    .active-nav-link {
+      border-bottom: 2px solid #3B82F6;
+      padding-bottom: 2px;
+    }
+    /* Dark Mode Toggle Switch Styles - consistent with index.html */
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px; /* Width of the entire switch */
+      height: 24px; /* Height of the entire switch */
+      vertical-align: middle; /* Align with text */
+      margin-left: 1rem; /* Adjust spacing from nav links */
+    }
+
+    /* Hide default HTML checkbox */
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider (the track) */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #718096; /* Grey for light mode (off) */
+      transition: .4s;
+      border-radius: 24px; /* Rounded corners for the track */
+    }
+
+    /* Background color of the slider when in dark mode (checked) */
+    .dark .slider {
+      background-color: #3B82F6; /* Blue for dark mode (on) */
+    }
+
+    /* The slider thumb */
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 18px; /* Height of the thumb */
+      width: 18px; /* Width of the thumb */
+      left: 3px; /* Initial position */
+      bottom: 3px; /* Initial position */
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%; /* Make it round */
+    }
+
+    /* Move the thumb when checked (dark mode active) */
+    .theme-switch input:checked + .slider::before {
+      transform: translateX(20px); /* Move 20px to the right */
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#1E293B] dark:bg-[#0F172A] dark:text-white font-sans transition-colors duration-500">
+
+  <header class="bg-[#1E293B] dark:bg-[#111827] py-4 px-6 shadow-md flex justify-between items-center relative">
+    <h1 class="text-2xl font-bold text-white">Deepu G</h1>
+    <nav class="space-x-4 text-sm sm:text-base text-white flex items-center">
+      <a href="index.html" class="hover:text-[#3B82F6]">Home</a>
+      <a href="aboutme.html" class="hover:text-[#3B82F6]">About Me</a>
+      <a href="experience.html" class="hover:text-[#3B82F6]">Experience</a>
+      <a href="project.html" class="hover:text-[#3B82F6]">Projects</a>
+      <a href="blog.html" class="hover:text-[#3B82F6]">Blog</a>
+      <a href="index.html#contact" class="hover:text-[#3B82F6]">Contact</a>
+      <!-- Dark Mode Toggle Switch -->
+      <label for="themeToggle" class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="themeIcon" class="ml-2 text-lg"></span>
+    </nav>
+  </header>
+
+  <section class="bg-[#1E293B] dark:bg-[#111827] py-3 px-6 text-white shadow-md">
+    <div class="max-w-4xl mx-auto text-left">
+      <span class="text-gray-300">
+        <a href="index.html" class="hover:text-[#3B82F6]">Home</a> / Experience
+      </span>
+    </div>
+  </section>
+
+  <section class="bg-[#1E293B] dark:bg-[#111827] py-8 px-6 text-center text-white shadow-md">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-[#3B82F6] dark:text-blue-400">My Professional Experience</h2>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto py-16 px-4">
+    <section class="bg-white dark:bg-[#1E293B] p-8 rounded-lg shadow-lg text-left transition-colors duration-500">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+
+          <div class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+            <h3 class="text-2xl font-semibold mb-2 text-[#3B82F6] dark:text-blue-400">Asan Innovators Pvt. Ltd.</h3>
+            <p class="text-xl font-medium text-gray-800 dark:text-white mb-2">Freelance AI Developer</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">2025 – Present</p>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong class="text-gray-800 dark:text-white">Parkinson's Disease Detection using CNN</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Built a CNN-based model to detect Parkinson’s disease using biomedical voice data.</li>
+                  <li>Preprocessed features and fine-tuned model architecture for improved accuracy.</li>
+                  <li>Integrated the model into a Streamlit web app for real-time prediction and visualization.</li>
+                  <li>Focused on interpretability using explainability tools like Grad-CAM.</li>
+                </ul>
+              </li>
+              <li><strong class="text-gray-800 dark:text-white">AI-Powered Lead Qualification Agent (In Progress)</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Developing an intelligent agent to evaluate and qualify business leads.</li>
+                  <li>Using NLP models to analyze behavior, responses, and engagement patterns.</li>
+                  <li>Creating a smart lead scoring system to assist sales teams in prioritizing follow-ups.</li>
+                  <li>Designing the system to integrate with CRMs and streamline the qualification process.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+            <h3 class="text-2xl font-semibold mb-2 text-[#3B82F6] dark:text-blue-400">Extravagant LLP Pvt. Ltd.</h3>
+            <p class="text-xl font-medium text-gray-800 dark:text-white mb-2">Freelance AI/ML Developer</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">2024 – 2025</p>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong class="text-gray-800 dark:text-white">Cyber Threat Detection using Flask & ReactJS</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Developed a full-stack web application to detect cyber threats in real-time.</li>
+                  <li>Implemented rule-based and anomaly detection techniques for analyzing system logs.</li>
+                  <li>Created RESTful APIs using Flask and built an interactive, responsive frontend in ReactJS.</li>
+                  <li>Delivered a live dashboard to visualize flagged threats and activity trends for faster response.</li>
+                </ul>
+              </li>
+              <li><strong class="text-gray-800 dark:text-white">Audio Deepfake Detection using Machine Learning</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Designed and trained ML models using MFCC features to classify real vs. fake audio.</li>
+                  <li>Used logistic regression and ensemble methods for improved detection accuracy.</li>
+                  <li>Built a Streamlit-based app for real-time inference and testing.</li>
+                  <li>Helped clients address deepfake security risks with a reliable detection pipeline.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+            <h3 class="text-2xl font-semibold mb-2 text-[#3B82F6] dark:text-blue-400">Edu Tantr Ventures Pvt. Ltd.</h3>
+            <p class="text-xl font-medium text-gray-800 dark:text-white mb-2">Artificial Intelligence Intern</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">July 2024 – October 2024</p>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong class="text-gray-800 dark:text-white">High-Utility Pattern Mining on Traffic Congestion Data</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Applied the HDSHUIM algorithm to discover high-utility spatial patterns from traffic datasets.</li>
+                  <li>Processed and cleaned over 100K+ records to identify zones with consistent congestion issues.</li>
+                  <li>Contributed insights to smart city planning initiatives by highlighting critical traffic hotspots.</li>
+                  <li>Collaborated with AI and data teams to visualize results and automate reporting workflows.</li>
+                  <li>Helped improve decision-making for urban mobility through interpretable and actionable outputs.</li>
+                </ul>
+              </li>
+            </ol>
+            <div class="mt-8 text-center">
+              <a href="https://colab.research.google.com/github/UdayLab/PAMI/blob/main/notebooks/highUtilitySpatialPattern/basic/HDSHUIM.ipynb" target="_blank" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                See Internship Project Here!
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+            <h3 class="text-2xl font-semibold mb-2 text-[#3B82F6] dark:text-blue-400">Private Tutor (Self-Employed)</h3>
+            <p class="text-xl font-medium text-gray-800 dark:text-white mb-2">AI/ML & Python Instructor</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">Dec 2024 – May 2025</p>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong class="text-gray-800 dark:text-white">Training Students in AI, ML & Python</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Delivered personalized and group sessions on Artificial Intelligence, Machine Learning, Deep Learning, and Python programming.</li>
+                  <li>Covered practical topics such as Exploratory Data Analysis (EDA), model evaluation, and algorithm selection.</li>
+                  <li>Helped students build confidence by guiding them through hands-on coding and mini-projects.</li>
+                  <li>Simplified complex ML concepts using real-world analogies and interactive examples.</li>
+                  <li>Focused on making AI/ML education approachable, practical, and project-based.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="last:border-b-0">
+            <h3 class="text-2xl font-semibold mb-2 text-[#3B82F6] dark:text-blue-400">Student Researcher</h3>
+            <p class="text-xl font-medium text-gray-800 dark:text-white mb-2">Acharya Institute of Graduate Studies</p>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">2023 – 2024</p>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+              <li><strong class="text-gray-800 dark:text-white">Jasmine Leaf Disease Detection using Transfer Learning</strong>
+                <ul class="list-disc list-inside ml-4 mt-1 space-y-1">
+                  <li>Conducted research on classifying jasmine plant leaf diseases using image-based deep learning techniques.</li>
+                  <li>Collected and curated a custom image dataset manually from real-world environments.</li>
+                  <li>Applied transfer learning with EfficientNet, achieving over 93% classification accuracy.</li>
+                  <li>Focused on improving data quality, model generalization, and training efficiency.</li>
+                  <li>Co-authored a research paper published in an international journal, contributing to agricultural AI solutions.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+
+        <div class="md:col-span-1 text-left">
+          <h3 class="text-2xl font-semibold mb-4 text-[#3B82F6] dark:text-blue-400">Summary</h3>
+          <div class="text-gray-700 dark:text-gray-300 mb-8 space-y-4">
+            <p><strong class="uppercase text-gray-800 dark:text-white">Professional + Freelancing + Internship</strong><br>1+ Year</p>
+            <p><strong class="uppercase text-gray-800 dark:text-white">Personal & Client Projects Completed</strong><br>20+</p>
+            <p><strong class="uppercase text-gray-800 dark:text-white">AI/ML Teaching & Tutoring (Private)</strong><br>6+ Months</p>
+            <p><strong class="uppercase text-gray-800 dark:text-white">Research Experience</strong><br>1+ Year</p>
+            <p><strong class="uppercase text-gray-800 dark:text-white">Published Research Papers</strong><br>1 (International Journal)</p>
+            <p><strong class="uppercase text-gray-800 dark:text-white">Academic Contributions</strong><br>CNN-based plant disease detection project (published)</p>
+          </div>
+          <div class="text-center">
+            <a href="project.html" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+              My Personal Projects!
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#0F172A] text-center text-gray-400 text-sm py-4 dark:bg-[#111827] dark:text-gray-500 transition-colors duration-500 mt-12">
+    © 2025 Deepu G | Data Science Portfolio
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Dark Mode Toggle Logic
+      const themeToggleCheckbox = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+
+      const toggleTheme = () => {
+        const html = document.documentElement;
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          themeToggleCheckbox.checked = false;
+          themeIcon.textContent = '🌙';
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          themeToggleCheckbox.checked = true;
+          themeIcon.textContent = '☀️';
+        }
+      };
+
+      // Load saved theme and set initial state
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        themeToggleCheckbox.checked = true;
+        themeIcon.textContent = '☀️';
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light'); // Ensure it's explicitly set to light
+        themeToggleCheckbox.checked = false;
+        themeIcon.textContent = '🌙';
+      }
+      themeToggleCheckbox.addEventListener('change', toggleTheme);
+
+      // Active Navigation Highlight Script for standalone pages
+      function highlightNavLink() {
+        const currentPath = window.location.pathname.split('/').pop(); // Get filename (e.g., "experience.html")
+        const navLinks = document.querySelectorAll('nav a'); // Get all nav links
+
+        navLinks.forEach(link => {
+          link.classList.remove('active-nav-link'); // Remove active class from all links
+
+          const linkPath = link.getAttribute('href').split('/').pop(); // Get filename from link href
+
+          if (currentPath === linkPath) {
+            link.classList.add('active-nav-link'); // Add active class if paths match
+          } else if (currentPath === '' && linkPath === 'index.html') { // Special case for index.html if accessed directly without filename
+              link.classList.add('active-nav-link');
+          }
+        });
+      }
+      // Call on initial load
+      highlightNavLink();
+    });
+  </script>
+
+</body>
+</html>

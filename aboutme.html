@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepu G | More About Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind Dark Mode config - ensure it's consistent
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    /* Simple Dark Mode Toggle Style for this page */
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #FFF; /* Default for dark header */
+    }
+    .dark .theme-toggle {
+      color: #FFF; /* Stays white in dark mode too */
+    }
+    /* Active navigation link highlight for this page (for visual consistency, if desired) */
+    .active-nav-link {
+      border-bottom: 2px solid #3B82F6;
+      padding-bottom: 2px;
+    }
+    /* Dark Mode Toggle Switch Styles - consistent with index.html */
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px; /* Width of the entire switch */
+      height: 24px; /* Height of the entire switch */
+      vertical-align: middle; /* Align with text */
+      margin-left: 1rem; /* Adjust spacing from nav links */
+    }
+
+    /* Hide default HTML checkbox */
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider (the track) */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #718096; /* Grey for light mode (off) */
+      transition: .4s;
+      border-radius: 24px; /* Rounded corners for the track */
+    }
+
+    /* Background color of the slider when in dark mode (checked) */
+    .dark .slider {
+      background-color: #3B82F6; /* Blue for dark mode (on) */
+    }
+
+    /* The slider thumb */
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 18px; /* Height of the thumb */
+      width: 18px; /* Width of the thumb */
+      left: 3px; /* Initial position */
+      bottom: 3px; /* Initial position */
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%; /* Make it round */
+    }
+
+    /* Move the thumb when checked (dark mode active) */
+    .theme-switch input:checked + .slider::before {
+      transform: translateX(20px); /* Move 20px to the right */
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#1E293B] dark:bg-[#0F172A] dark:text-white font-sans transition-colors duration-500">
+
+  <header class="bg-[#1E293B] dark:bg-[#111827] py-4 px-6 shadow-md flex justify-between items-center relative">
+    <h1 class="text-2xl font-bold text-white">Deepu G</h1>
+    <nav class="space-x-4 text-sm sm:text-base text-white flex items-center">
+      <a href="index.html" class="hover:text-[#3B82F6]">Home</a>
+      <a href="aboutme.html" class="hover:text-[#3B82F6]">About Me</a>
+      <a href="experience.html" class="hover:text-[#3B82F6]">Experience</a>
+      <a href="project.html" class="hover:text-[#3B82F6]">Projects</a>
+      <a href="blog.html" class="hover:text-[#3B82F6]">Blog</a>
+      <a href="index.html#contact" class="hover:text-[#3B82F6]">Contact</a>
+      <!-- Dark Mode Toggle Switch -->
+      <label for="themeToggle" class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="themeIcon" class="ml-2 text-lg"></span>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb section - now matches header width and padding -->
+  <section class="bg-[#1E293B] dark:bg-[#111827] py-3 px-6 text-white shadow-md">
+    <div class="max-w-6xl mx-auto text-left">
+      <span class="text-gray-300">
+        <a href="index.html" class="hover:text-[#3B82F6]">Home</a> / About Me
+      </span>
+    </div>
+  </section>
+
+  <!-- "This is Who I Am!" section content - now matches header width and padding -->
+  <section class="bg-[#1E293B] dark:bg-[#111827] py-8 px-6 text-center text-white shadow-md">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold text-[#3B82F6] dark:text-blue-400">This is Who I Am!</h2>
+    </div>
+  </section>
+
+  <!-- Main content area - adjusted to max-w-6xl and px-4 for alignment -->
+  <main class="max-w-6xl mx-auto py-16 px-4">
+    <!-- Two-column section with dark background and rounded corners -->
+    <section class="bg-[#1E293B] dark:bg-[#111827] p-8 rounded-lg shadow-lg text-white transition-colors duration-500">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Left Column (bigger) -->
+        <div class="md:col-span-2 text-left">
+          <h3 class="text-2xl font-semibold mb-4 text-[#3B82F6] dark:text-blue-400">My Professional Journey</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Numbers have always fascinated me — not just for their logic, but for the stories they hide beneath the surface. I earned my Master’s in Computer Applications with distinction, and along the way, discovered my passion wasn’t just in solving problems, but in building smart, data-driven systems that solve real ones.
+            <br><br>
+            During my academic journey, I contributed to a research paper published in an international journal, and I’ve spent over 1 year in research, refining my ability to think critically, dig deep, and present insights clearly. That same mindset guided me as I stepped into the world of AI and machine learning.
+            <br><br>
+            In the past year as a freelancer, I’ve worked with diverse clients to build everything from stock prediction tools and AI dashboards, to speech recognition systems, deepfake detectors, and image classification apps using CNNs. I’ve taken on projects where I had no prior experience — and still delivered beyond expectations.
+            <br><br>
+            Alongside that, I’ve been teaching AI/ML privately for over 6 months, helping students understand complex topics in a practical, easy-to-follow way. I believe if you can’t explain it clearly, you probably don’t understand it well enough — and that belief has made me a better developer and mentor.
+            <br><br>
+            So far, I’ve completed 20+ projects, using tools like Python, Scikit-learn, TensorFlow, SQL, Streamlit, and Flask. I’ve worked on EDA with real-world datasets like Zomato and Black Friday, optimized models, built dashboards, and deployed full applications — end to end. During my AI internship, I even built tools used for smart city planning, working with 100K+ records and boosting model accuracy by 20%.
+            <br><br>
+            For me, data is more than just numbers — it’s about understanding people, processes, and decisions. I thrive on curiosity, love solving open-ended problems, and bring creativity and structure to every project I take on.
+            <br><br>
+            If you’re looking for someone who learns fast, thinks critically, and builds solutions that actually make an impact — let’s connect.
+          </p>
+        </div>
+
+        <!-- Right Column (smaller) -->
+        <div class="md:col-span-1 text-left">
+          <h3 class="text-2xl font-semibold mb-4 text-[#3B82F6] dark:text-blue-400">Education</h3>
+          <p class="text-gray-300 leading-relaxed">
+            <strong>MASTER OF COMPUTER APPLICATIONS</strong><br>
+            Acharya Institute of Graduate Studies (2022–2024)<br>
+            CGPA: 8.83/10 (First Class Exemplary with Distinction)
+            <br><br>
+            <strong>BACHELOR OF COMPUTER APPLICATIONS</strong><br>
+            Sindhi College of Commerce (2019–2022)<br>
+            CGPA: 8.88/10 (First Class Exemplary with Distinction)
+          </p>
+          <div class="mt-8 text-center">
+            <a href="experience.html" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+              Here's My Experience!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="index.html" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+        Back to Portfolio
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-[#0F172A] text-center text-gray-400 text-sm py-4 dark:bg-[#111827] dark:text-gray-500 transition-colors duration-500 mt-12">
+    © 2025 Deepu G | Data Science Portfolio
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Dark Mode Toggle Logic
+      const themeToggleCheckbox = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+
+      const toggleTheme = () => {
+        const html = document.documentElement;
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          themeToggleCheckbox.checked = false;
+          themeIcon.textContent = '🌙';
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          themeToggleCheckbox.checked = true;
+          themeIcon.textContent = '☀️';
+        }
+      };
+
+      // Load saved theme and set initial state
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        themeToggleCheckbox.checked = true;
+        themeIcon.textContent = '☀️';
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light'); // Ensure it's explicitly set to light
+        themeToggleCheckbox.checked = false;
+        themeIcon.textContent = '🌙';
+      }
+      themeToggleCheckbox.addEventListener('change', toggleTheme);
+
+      // Active Navigation Highlight Script for standalone pages
+      function highlightNavLink() {
+        const currentPath = window.location.pathname.split('/').pop(); // Get filename (e.g., "aboutme.html")
+        const navLinks = document.querySelectorAll('nav a'); // Get all nav links
+
+        navLinks.forEach(link => {
+          link.classList.remove('active-nav-link'); // Remove active class from all links
+
+          const linkPath = link.getAttribute('href').split('/').pop(); // Get filename from link href
+
+          if (currentPath === linkPath) {
+            link.classList.add('active-nav-link'); // Add active class if paths match
+          } else if (currentPath === '' && linkPath === 'index.html') { // Special case for index.html if accessed directly without filename
+              link.classList.add('active-nav-link');
+          }
+        });
+      }
+      // Call on initial load
+      highlightNavLink();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deepu G | Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind Dark Mode config - ensure it's consistent
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #FFF;
+    }
+    .dark .theme-toggle {
+      color: #FFF;
+    }
+    /* Active navigation link highlight for this page */
+    .active-nav-link {
+      border-bottom: 2px solid #3B82F6;
+      padding-bottom: 2px;
+    }
+    /* Dark Mode Toggle Switch Styles - consistent with index.html */
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px; /* Width of the entire switch */
+      height: 24px; /* Height of the entire switch */
+      vertical-align: middle; /* Align with text */
+      margin-left: 1rem; /* Adjust spacing from nav links */
+    }
+
+    /* Hide default HTML checkbox */
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider (the track) */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #718096; /* Grey for light mode (off) */
+      transition: .4s;
+      border-radius: 24px; /* Rounded corners for the track */
+    }
+
+    /* Background color of the slider when in dark mode (checked) */
+    .dark .slider {
+      background-color: #3B82F6; /* Blue for dark mode (on) */
+    }
+
+    /* The slider thumb */
+    .slider::before {
+      position: absolute;
+      content: "";
+      height: 18px; /* Height of the thumb */
+      width: 18px; /* Width of the thumb */
+      left: 3px; /* Initial position */
+      bottom: 3px; /* Initial position */
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%; /* Make it round */
+    }
+
+    /* Move the thumb when checked (dark mode active) */
+    .theme-switch input:checked + .slider::before {
+      transform: translateX(20px); /* Move 20px to the right */
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#1E293B] dark:bg-[#0F172A] dark:text-white font-sans transition-colors duration-500">
+
+  <header class="bg-[#1E293B] dark:bg-[#111827] py-4 px-6 shadow-md flex justify-between items-center relative">
+    <h1 class="text-2xl font-bold text-white">Deepu G</h1>
+    <nav class="space-x-4 text-sm sm:text-base text-white flex items-center">
+      <a href="index.html" class="hover:text-[#3B82F6]">Home</a>
+      <a href="aboutme.html" class="hover:text-[#3B82F6]">About Me</a>
+      <a href="experience.html" class="hover:text-[#3B82F6]">Experience</a>
+      <a href="project.html" class="hover:text-[#3B82F6]">Projects</a>
+      <a href="blog.html" class="hover:text-[#3B82F6]">Blog</a>
+      <a href="index.html#contact" class="hover:text-[#3B82F6]">Contact</a>
+      <!-- Dark Mode Toggle Switch -->
+      <label for="themeToggle" class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="themeIcon" class="ml-2 text-lg"></span>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb section -->
+  <section class="bg-[#1E293B] dark:bg-[#111827] py-3 px-6 text-white shadow-md">
+    <div class="max-w-4xl mx-auto text-left">
+      <span class="text-gray-300">
+        <a href="index.html" class="hover:text-[#3B82F6]">Home</a> / Projects
+      </span>
+    </div>
+  </section>
+
+  <!-- Main heading for the page -->
+  <section class="bg-[#1E293B] dark:bg-[#111827] py-8 px-6 text-center text-white shadow-md">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-[#3B82F6] dark:text-blue-400">My Personal Projects</h2>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto py-16 px-4">
+    <section class="bg-white dark:bg-[#1E293B] p-8 rounded-lg shadow-lg text-left transition-colors duration-500">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Left Column: Detailed Projects -->
+        <div class="md:col-span-2">
+          <h3 class="text-2xl font-semibold mb-4 text-[#3B82F6] dark:text-blue-400">Detailed Projects (AI/ML/DL)</h3>
+          <div class="space-y-6 text-gray-700 dark:text-gray-300">
+            <!-- Projects are now sorted alphabetically by title -->
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">1. Audio Deepfake Detection using Machine Learning</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Designed and trained ML models using MFCC features to classify real vs. fake audio.</li>
+                <li>Used logistic regression and ensemble methods for improved detection accuracy.</li>
+                <li>Built a Streamlit-based app for real-time inference and testing.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">2. Chatbot Development using NLP</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Built an interactive chatbot leveraging Natural Language Processing techniques.</li>
+                <li>Designed for customer support and information retrieval.</li>
+                <li>Implemented intent recognition and response generation for natural conversations.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">3. Customer Segmentation using K-Means Clustering</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Applied K-Means clustering to segment customer data based on purchasing behavior.</li>
+                <li>Identified distinct customer groups for targeted marketing strategies.</li>
+                <li>Visualized clusters to provide clear insights into customer demographics.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">4. Cyber Threat Detection System</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Detects DDoS, Ransomware, and Brute Force attacks using Machine Learning.</li>
+                <li>Implemented with Docker, Flask (backend), and React (frontend).</li>
+                <li>Features custom feature engineering for packet-level metrics.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">5. Fake News Detection App</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Built using LSTM, Flask, HTML/CSS, and NewsAPI.</li>
+                <li>Deployed on Render for accessibility.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">6. Handwritten Digit Recognition</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Utilizes CNN trained on the MNIST dataset.</li>
+                <li>Features an HTML5 Canvas for drawing, a Flask backend for processing, and real-time recognition.</li>
+                <li>Deployed as a Streamlit application.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">7. Movie Recommendation System</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Developed with SVD & Surprise Library.</li>
+                <li>Includes user authentication, feedback learning, and real-time retraining for dynamic recommendations.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">8. Parkinson's Disease Detection</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>System built using PyTorch (ResNet18) and MRI images.</li>
+                <li>Applies transfer learning for enhanced model performance.</li>
+                <li>Deployed as a Streamlit application for practical use.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">9. Real-time Object Detection</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Developed using YOLOv4-Tiny for efficient real-time detection.</li>
+                <li>Supports detection via webcam and uploaded images.</li>
+                <li>Converted into a user-friendly Streamlit application.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">10. Real-time Weather Prediction using API</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Integrated with a weather API to fetch real-time atmospheric data.</li>
+                <li>Applied machine learning models to predict weather conditions.</li>
+                <li>Developed a user-friendly interface to display current and forecasted weather.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">11. Traffic Sign Classification using CNN</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Developed a CNN-based model for accurate traffic sign recognition.</li>
+                <li>Preprocessed image data and optimized model architecture.</li>
+                <li>Aimed at assisting autonomous driving systems and traffic monitoring.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Data Analysis Projects -->
+        <div class="md:col-span-1">
+          <h3 class="text-2xl font-semibold mb-4 text-[#3B82F6] dark:text-blue-400">Data Analysis</h3>
+          <div class="space-y-6 text-gray-700 dark:text-gray-300">
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">1. Flight Price Prediction Dataset</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Focused on extensive data preprocessing to make the data ready for model training.</li>
+                <li>Handled missing values, encoded categorical features, and normalized numerical data.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">2. Black Friday Dataset Analysis</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Analyzed customer purchase behavior for a retail company ("ABC Private Limited") to understand purchase amounts against various products and categories.</li>
+                <li>The dataset included customer demographics (age, gender, marital status, city type, stay in current city), product details (product ID and product category), and total purchase amount from the last month.</li>
+                <li>The goal was to build a model to predict customer purchase amounts for personalized offers.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">3. Zomato Dataset Analysis</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Identified and handled missing values across the dataset.</li>
+                <li>Explored numerical features through statistical summaries and visualizations.</li>
+                <li>Analyzed categorical features to understand distributions and relationships.</li>
+                <li>Investigated relationships between various features to uncover insights into restaurant data.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">4. Automated Exploratory Data Analysis (EDA) - Titanic Dataset</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Performed automated exploratory data analysis on the Titanic dataset.</li>
+                <li>Used `ydata-profiling` (formerly `pandas-profiling`) to quickly generate comprehensive reports.</li>
+                <li>Identified data quality issues and gained initial insights into the dataset's structure and relationships.</li>
+              </ul>
+            </div>
+            <div class="project-item mb-6 pb-6 last:border-b-0">
+              <h4 class="text-xl font-semibold mb-2">5. Penguin Dataset Exploratory Data Analysis</h4>
+              <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Conducted a comprehensive exploratory data analysis on the Palmer Archipelago Penguins dataset from Kaggle.</li>
+                <li>Performed data cleaning, handling missing values, and outlier detection.</li>
+                <li>Visualized distributions of numerical and categorical features (e.g., culmen length, body mass, species, island).</li>
+                <li>Explored relationships between different features to understand penguin characteristics and patterns across species.</li>
+              </ul>
+            </div>
+            <div class="mt-8 text-center">
+              <a href="https://github.com/deepug1042/Exploratory_data_analysis" target="_blank" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                See Analysis!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <a href="https://github.com/deepug1042?tab=repositories" target="_blank" class="inline-block px-8 py-3 bg-[#3B82F6] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+          See All My Projects on GitHub!
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#0F172A] text-center text-gray-400 text-sm py-4 dark:bg-[#111827] dark:text-gray-500 transition-colors duration-500 mt-12">
+    © 2025 Deepu G | Data Science Portfolio
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Dark Mode Toggle Logic
+      const themeToggleCheckbox = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+
+      const toggleTheme = () => {
+        const html = document.documentElement;
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          themeToggleCheckbox.checked = false;
+          themeIcon.textContent = '🌙';
+        } else {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          themeToggleCheckbox.checked = true;
+          themeIcon.textContent = '☀️';
+        }
+      };
+
+      // Load saved theme and set initial state
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        themeToggleCheckbox.checked = true;
+        themeIcon.textContent = '☀️';
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light'); // Ensure it's explicitly set to light
+        themeToggleCheckbox.checked = false;
+        themeIcon.textContent = '🌙';
+      }
+      themeToggleCheckbox.addEventListener('change', toggleTheme);
+
+      // Active Navigation Highlight Script for standalone pages
+      function highlightNavLink() {
+        const currentPath = window.location.pathname.split('/').pop(); // Get filename (e.g., "project.html")
+        const navLinks = document.querySelectorAll('nav a'); // Get all nav links
+
+        navLinks.forEach(link => {
+          link.classList.remove('active-nav-link'); // Remove active class from all links
+
+          const linkPath = link.getAttribute('href').split('/').pop(); // Get filename from link href
+
+          if (currentPath === linkPath) {
+            link.classList.add('active-nav-link'); // Add active class if paths match
+          } else if (currentPath === '' && linkPath === 'index.html') { // Special case for index.html if accessed directly without filename
+              link.classList.add('active-nav-link');
+          }
+        });
+      }
+      // Call on initial load
+      highlightNavLink();
+    });
+  </script>
+
+</body>
+</html>
